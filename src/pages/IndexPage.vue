@@ -12,8 +12,30 @@ import { api } from 'src/boot/axios';
 import { ref } from 'vue';
 import dayjs from 'dayjs';
 
+import { useQuasar } from 'quasar'
+
+const $q = useQuasar();
 const currentValue = ref(0);
 const currentDate = ref(dayjs());
+
+window.addEventListener('online', (event) => {
+  $q.notify({
+    color:"positive",
+    message: "В сети",
+    multiline: true,
+    position: "top"
+  });
+});
+
+window.addEventListener('offline', (event) => {
+  $q.notify({
+    color:"warning",
+    message: "Нет сети",
+    multiline: true,
+    position: "top"
+  });
+});
+
 
 api.get('https://www.cbr-xml-daily.ru/daily_json.js')
 .then((response) => {
