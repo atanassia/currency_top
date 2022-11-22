@@ -1,0 +1,10 @@
+yarn quasar dev -m pwa
+
+запуск android studio 
+yarn quasar dev -m capacitor -T android
+
+иконки
+yarn global bi
+C:\Users\Liza\AppData\Local\Yarn\bin\icongenie generate -m capacitor -i ./public/icons/coin.png
+
+yarn quasar build -m capacitor -T android

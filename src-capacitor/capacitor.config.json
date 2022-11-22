@@ -1,0 +1,12 @@
+{
+  "appId": "org.currencytop.com",
+  "appName": "Currency Top",
+  "bundledWebRuntime": false,
+  "npmClient": "yarn",
+  "webDir": "www",
+  "plugins": {
+    "SplashScreen": {
+      "androidScaleType": "CENTER_CROP"
+    }
+  }
+}

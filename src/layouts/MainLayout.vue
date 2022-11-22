@@ -6,7 +6,7 @@
           <img src="icons/icon-128x128.png" />
         </q-avatar>
         <q-toolbar-title>
-          Currency Top
+          Currency Top {{ platform }}
         </q-toolbar-title>
       </q-toolbar>
     </q-header>
@@ -18,4 +18,12 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+import { useQuasar } from "quasar";
+
+const $q = useQuasar()
+const platform = computed(() => {
+  return $q.platform.is.capacitor ? "(mobile)" : "";
+})
+
 </script>
