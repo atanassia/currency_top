@@ -8,5 +8,8 @@
     "SplashScreen": {
       "androidScaleType": "CENTER_CROP"
     }
+  },
+  "server": {
+    "url": "http://192.168.56.1:9500"
   }
 }
